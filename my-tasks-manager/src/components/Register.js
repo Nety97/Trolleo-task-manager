@@ -19,7 +19,7 @@ class Register extends React.Component{
     }
     sendDataBase = () => {
         let {nameUser, email, password} = this.state
-        fetch('http://localhost:4000/register',{
+        fetch(`${process.env.REACT_APP_SERVER_DB}/register`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

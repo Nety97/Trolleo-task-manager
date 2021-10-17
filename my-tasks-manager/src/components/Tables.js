@@ -20,7 +20,7 @@ class Tables extends React.Component{
     createTable = () => {
         const {project} = this.state
         if (project) {
-            fetch('http://localhost:4000/createTable',{
+            fetch(`${process.env.REACT_APP_SERVER_DB}/createTable`,{
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -44,7 +44,7 @@ class Tables extends React.Component{
     
     componentDidMount () {
 
-        fetch('http://localhost:4000/getUserTables',{
+        fetch(`${process.env.REACT_APP_SERVER_DB}/getUserTables`,{
             method: 'POST',
             mode: 'cors',
             headers: {

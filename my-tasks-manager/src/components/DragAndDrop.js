@@ -74,12 +74,12 @@ class DragAndDrop extends React.Component{
         if (!result.destination) {
             return
         }
-        console.log(result);
+        // console.log(result);
         if (result.destination.droppableId === result.source.droppableId && result.destination.droppableId === "colunmOne") {
             const items = this.state.todoArray;
             const [reorderedItem] = items.splice(result.source.index, 1);
             items.splice(result.destination.index, 0, reorderedItem)
-            console.log( [reorderedItem] );
+            // console.log( [reorderedItem] );
             this.setState({todoArray: [...items]}, ()=> {
                 this.saveTasksOnDB(this.state.todoArray, this.state.progressArray, this.state.doneArray)
             })
@@ -261,9 +261,9 @@ class DragAndDrop extends React.Component{
 
     saveTasksOnDB = (todoArray, progressArray, doneArray) => {
         let {urlParam} = this.state
-        console.log(todoArray);
+        // console.log(todoArray);
         
-        fetch('http://localhost:4000/addTask',{
+        fetch(`${process.env.REACT_APP_SERVER_DB}/addTask`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -272,7 +272,7 @@ class DragAndDrop extends React.Component{
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data[0]);
+            // console.log(data[0]);
             
             let {table} = data[0]
             let {toDo, inProgress, done} = table
@@ -283,7 +283,7 @@ class DragAndDrop extends React.Component{
 
     componentDidMount () {
         
-        fetch('http://localhost:4000/getTable',{
+        fetch(`${process.env.REACT_APP_SERVER_DB}/getTable`,{
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -293,7 +293,7 @@ class DragAndDrop extends React.Component{
         })
         .then(res => res.json())
         .then(data => {
-           console.log(data[0].data_table.table);
+        //    console.log(data[0].data_table.table);
             let {data_table} = data[0]
             let {table} = data_table
             let {toDo, inProgress, done} = table
@@ -305,7 +305,7 @@ class DragAndDrop extends React.Component{
     }
 
     render () {
-        console.log(this.state.progressArray)
+        // console.log(this.state.progressArray)
         return(
             <div>
                 <NavbarAuth/>
