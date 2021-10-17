@@ -1,0 +1,272 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 9vh;
+  background-color:rgb(14, 207, 79);
+  color: white;
+  min-width: -webkit-fill-available;
+}
+footer{
+  margin-top: auto;
+  background-color:rgb(14, 207, 79);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 7vh;
+  color: white;
+  min-width: -webkit-fill-available;
+}
+.father{
+  display: inline-flex;
+  margin-top: 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav-links{
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 0;
+}
+.task{
+  background-color: red;
+  list-style: none;
+  border-radius: 8px;
+}
+.tasktwo{
+  background-color: yellow;
+  list-style: none;
+  border-radius: 8px;
+}
+.taskthree{
+  background-color: rgb(14, 207, 79);
+  list-style: none;
+  border-radius: 8px;
+}
+.trashli{
+  background-color: black;
+  color: white;
+  list-style: none;
+  border-radius: 8px;
+}
+ul{
+  padding: 0 20px;
+  padding-left: 20px!important;
+}
+li{
+  padding: 8px;
+  margin: 3px;
+  width: auto;
+  list-style: none;
+}
+.columnOne{
+  width: 30vw;
+  border: 2px solid red;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 3px 3px red;
+}
+.columnTwo{
+  width: 30vw;
+  border: 2px solid yellow;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 3px 3px yellow;
+}
+.columnThree{
+  width: 30vw;
+  border: 2px solid rgb(14, 207, 79);
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 3px 3px rgb(14, 207, 79);
+}
+.trash{
+  width: 30vw;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 3px 3px black;
+}
+.linkHome{
+  text-decoration: none;
+  color: white;
+}
+.links{
+  text-decoration: none;
+  color: white;
+}
+
+.image{
+  width: 100vw;
+  height: 40vh;
+  background-color: red;
+  /* background-image: url('https://images.pexels.com/photos/374631/pexels-photo-374631.jpeg?cs=srgb&dl=pexels-burst-374631.jpg&fm=jpg'); */
+  background-image: url('https://media.gettyimages.com/vectors/vector-set-of-design-templates-and-elements-for-social-media-in-vector-id1125908844?s=2048x2048');
+  /* https://media.gettyimages.com/vectors/set-of-contact-us-and-support-icons-vector-pattern-design-vector-id1183632265?s=2048x2048 */
+  background-size: cover;
+  color: rgb(14, 207, 79);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titleHome{
+  font-size: 8rem;
+  font-family: 'Permanent Marker', cursive;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 0;
+}
+.card{
+  align-items: center;
+  margin: 40px;
+  background-color: rgb(14, 207, 79)!important;
+  color: white!important;
+  border-radius: 8px!important;
+  /* min-width: 18rem!important; */
+}
+.card-img-top{
+  width: 40%!important;
+  margin: 10px;
+  
+}
+.someText{
+  margin-bottom: 50px;
+}
+.sign-style{
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+
+}
+.forms{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 19px;
+}
+.margin{
+  margin: 7.5px;
+}
+.Mybtn{
+  background-color: rgb(14, 207, 79); 
+  border: none;
+  color: white;
+  padding: 11px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.Mybtn:hover{
+  background-color: rgb(173, 233, 194);
+  color: rgb(12, 177, 67);
+  transition: 0.5s;
+}
+.Myinput{
+  padding: 9px 30px;
+  border-radius: 6px;
+  border: 2px solid rgb(14, 207, 79);
+}
+
+.Myh1{
+  font-size: 3.3rem;
+}
+.tableH1{
+  font-size: 3.3rem;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.tableH2{
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.MybtnToDo{
+  background-color: red; 
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.MybtnToDo:hover{
+  background-color: rgb(252, 182, 182);
+  color: black;
+  transition: 0.5s;
+}
+.MyinputToDo{
+  padding: 4px 18px;
+  border-radius: 6px;
+  border: 2px solid yellow;
+  margin-bottom: 20px;
+}
+.MybtnProg{
+  background-color: yellow; 
+  border: none;
+  color: rgb(151, 151, 64);
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.MybtnProg:hover{
+  background-color: rgb(255, 255, 149);
+  color: black;
+  transition: 0.5s;
+}
+.MyinputProg{
+  padding: 4px 18px;
+  border-radius: 6px;
+  border: 2px solid yellow;
+  margin-bottom: 20px;
+}
+.MybtnDone{
+  background-color: rgb(14, 207, 79); 
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.MybtnDone:hover{
+  background-color: rgb(173, 233, 194);
+  color: rgb(12, 177, 67);
+  transition: 0.5s;
+}
+.MyinputDone{
+  padding: 4px 18px;
+  border-radius: 6px;
+  border: 2px solid rgb(14, 207, 79);
+  margin-bottom: 20px;
+}
+/* min-height: 400px;
+max-height: 400px;
+to make the columns */
