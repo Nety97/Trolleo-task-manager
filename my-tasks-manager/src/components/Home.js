@@ -10,7 +10,7 @@ function Home() {
             <div className='image'>
                 <h1 className='titleHome'>TROLLEO</h1>
             </div>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+            <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
                 <div>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/512/4149/4149646.png" />

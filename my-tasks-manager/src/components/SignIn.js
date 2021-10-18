@@ -21,7 +21,7 @@ class SignIn extends React.Component{
     sendNode = () => {
         let {email, password} = this.state
         
-        fetch(`${process.env.REACT_APP_SERVER_DB}/signin`,{
+        fetch(`https://trolleo-db.herokuapp.com/signin`,{
             method: 'POST',
             mode: 'cors',
             headers: {

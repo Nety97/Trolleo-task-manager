@@ -263,7 +263,7 @@ class DragAndDrop extends React.Component{
         let {urlParam} = this.state
         // console.log(todoArray);
         
-        fetch(`${process.env.REACT_APP_SERVER_DB}/addTask`,{
+        fetch(`https://trolleo-db.herokuapp.com/addTask`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -283,7 +283,7 @@ class DragAndDrop extends React.Component{
 
     componentDidMount () {
         
-        fetch(`${process.env.REACT_APP_SERVER_DB}/getTable`,{
+        fetch(`https://trolleo-db.herokuapp.com/getTable`,{
             method: 'POST',
             mode: 'cors',
             headers: {

@@ -19,7 +19,7 @@ class Register extends React.Component{
     }
     sendDataBase = () => {
         let {nameUser, email, password} = this.state
-        fetch(`${process.env.REACT_APP_SERVER_DB}/register`,{
+        fetch(`https://trolleo-db.herokuapp.com/register`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

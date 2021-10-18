@@ -17,7 +17,7 @@ const Auth = (ComponentToProtect, token) => {
        }
        else{
         // console.log('componentDidMount',token);
-        fetch(`${process.env.REACT_APP_SERVER_DB}/checkToken`,{
+        fetch(`https://trolleo-db.herokuapp.com/checkToken`,{
           method:'POST',
           headers: {
             'Content-type':'application/json'

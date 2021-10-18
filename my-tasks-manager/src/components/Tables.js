@@ -20,7 +20,7 @@ class Tables extends React.Component{
     createTable = () => {
         const {project} = this.state
         if (project) {
-            fetch(`${process.env.REACT_APP_SERVER_DB}/createTable`,{
+            fetch(`https://trolleo-db.herokuapp.com/createTable`,{
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -44,7 +44,7 @@ class Tables extends React.Component{
     
     componentDidMount () {
 
-        fetch(`${process.env.REACT_APP_SERVER_DB}/getUserTables`,{
+        fetch(`https://trolleo-db.herokuapp.com/getUserTables`,{
             method: 'POST',
             mode: 'cors',
             headers: {
