@@ -83,13 +83,14 @@ class Tables extends React.Component{
                         ) : (
                             null
                         )}
-                {this.state.userTables ? this.state.userTables.map((item,index) => {
-                    return <div key={item.table_name}>
-                        <Link  to={`/tasks/${item.table_name}`}><h3>{item.table_name}</h3></Link>
-                        
-                        </div>
-                }) : null}
-                
+                <div style={{marginTop: '25px'}}>
+                    {this.state.userTables ? this.state.userTables.map((item,index) => {
+                        return <div key={item.table_name}>
+                            <Link className='linkTasks' to={`/tasks/${item.table_name}`}><h3>{item.table_name}</h3></Link>
+                            
+                            </div>
+                    }) : null}
+                </div>
             </div>
         )
     }

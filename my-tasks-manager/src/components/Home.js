@@ -29,7 +29,7 @@ function Home() {
                         <Card.Body>
                             <Card.Title>Save Time</Card.Title>
                             <Card.Text>
-                                You always have you tasks close so no more wasting time thinking what you have to do.
+                                You always have your tasks close so no more wasting time thinking what you have to do.
                             </Card.Text>
                            
                         </Card.Body>
@@ -51,7 +51,7 @@ function Home() {
             <div className='someText'>
                 <h2>Its not just Work. Its a way of Working.</h2>
                 <h5>
-                    Create many tables and tasks as you want. <br/> Organice them by status: To do, In progress and Done. <br/> 
+                    Create many tables and tasks as you want. <br/> Organize them by status: To do, In progress and Done. <br/> 
                     Try out. Its free!
                 </h5>
                 <Link style={{marginTop: '25px'}} to='/register' className='margin Mybtn'>Let's Start</Link>

@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,7 +11,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 
 nav{
@@ -54,6 +54,7 @@ footer{
 }
 .tasktwo{
   background-color: yellow;
+  /* hsl(60deg 100% 48%) */
   list-style: none;
   border-radius: 8px;
 }
@@ -129,7 +130,7 @@ li{
   align-items: center;
 }
 .titleHome{
-  font-size: 11vw;
+  font-size: 7vw;
   font-family: 'Permanent Marker', cursive;
   background-color: white;
   border-radius: 8px;
@@ -220,7 +221,7 @@ li{
 .MyinputToDo{
   padding: 4px 18px;
   border-radius: 6px;
-  border: 2px solid yellow;
+  border: 2px solid rgb(252, 182, 182);
   margin-bottom: 20px;
 }
 .MybtnProg{
@@ -267,6 +268,9 @@ li{
   border: 2px solid rgb(14, 207, 79);
   margin-bottom: 20px;
 }
+.linkTasks{
+  text-decoration: none;
+}
 @media all and (max-width: 600px) {
   .columnOne{
     width: 80vw;
@@ -279,6 +283,9 @@ li{
   }
   .trash{
     width: 80vw;
+  }
+  .titleHome{
+    font-size: 15vw;
   }
 }
 @media all and (max-width: 800px) and (min-width: 601px) {
@@ -293,5 +300,8 @@ li{
   }
   .trash{
     width: 42vw;
+  }
+  .titleHome{
+    font-size: 10vw;
   }
 }
