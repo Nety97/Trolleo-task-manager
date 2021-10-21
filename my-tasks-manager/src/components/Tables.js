@@ -71,7 +71,8 @@ class Tables extends React.Component{
         return(
             <div>
                 <NavbarAuth/>
-                <h1 className='tableH1'>Welcome {user[0].username}</h1>
+                
+                <h1 className='tableH1'>Welcome back, {user[0].username} 😊</h1>
 
                 <h2 className='tableH2'>Create new Project</h2>
                 <input className='margin Myinput' onChange={this.saveTask} value={this.state.project} placeholder='The name of your project' />

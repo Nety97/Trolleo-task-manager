@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import Navbarhome from "./Navbarhome";
 
 class Register extends React.Component{
@@ -65,10 +65,11 @@ class Register extends React.Component{
                             null
                             )}
                         {succesRegister ? (
-                            <div>
-                            <h5 style={{color:'rgb(14, 207, 79)'}}>{succesRegister}</h5>
-                            <Link to='/signin'><h5 style={{color: 'blue'}}>Sign In</h5></Link>
-                            </div>
+                            // <div>
+                            // <h5 style={{color:'rgb(14, 207, 79)'}}>{succesRegister}</h5>
+                            // <Link to='/signin'><h5 style={{color: 'blue'}}>Sign In</h5></Link>
+                            // </div>
+                            <Redirect to='/signin'/>
                         ) : (
                             null
                             )}
