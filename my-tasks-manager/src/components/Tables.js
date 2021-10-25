@@ -3,13 +3,22 @@ import {connect} from 'react-redux'
 import { Link } from "react-router-dom";
 import NavbarAuth from "./NavbarAuth";
 
+
 class Tables extends React.Component{
     constructor(){
         super();
         this.state={
             project: '',
             userTables: null,
-            tableErr: ''
+            tableErr: '',
+            numberEmoji: null,
+            emojis: ['😄','😉','😃','🙃','😉','😊','😇','🤩','😜','🤪',
+                    '🤗','🥳','🤠','😎','🤓','🧐','👻','👾','😸','😻',
+                    '🤟','👋','👌','✌️','🧑‍🚀','👨‍🔬','🧑‍🚒','👑','🦘','🙈',
+                    '🐶','🐼','🦊','🦄','🐯','🦁','🐴','🐻‍❄️','🦖','🦖',
+                    '🦈','🌵','🍀','☀️','🔥','🌈','⛷️','🏄','🛹','🏈',
+                    '⚽','⚾','🏓','🗽','🗼','🎡','⚓','🪂','🚁','🚀',
+                    '🛸','🗿','🏎️','🗻','🎉','🧿','🧸','💎','🔱','⚜️']
         }
     }
 
@@ -55,8 +64,8 @@ class Tables extends React.Component{
         .then(res => res.json())
         .then(data => {
         //    console.log(data);
-           
-           this.setState({userTables: data})
+        let random = Math.floor(Math.random() * 70)
+        this.setState({userTables: data, numberEmoji: random})
            
         })
         .catch(err => console.log(err))
@@ -65,14 +74,17 @@ class Tables extends React.Component{
     render(){
         let {user} = this.props
         let {tableErr} = this.state
-
+        
         // console.log(this.state.userTables);
         
         return(
             <div>
                 <NavbarAuth/>
                 
-                <h1 className='tableH1'>Welcome back, {user[0].username} 😊</h1>
+                <h1 className='tableH1'>
+                    Welcome back, {user[0].username} {this.state.emojis[this.state.numberEmoji]}
+                </h1>
+                
 
                 <h2 className='tableH2'>Create new Project</h2>
                 <input className='margin Myinput' onChange={this.saveTask} value={this.state.project} placeholder='The name of your project' />
